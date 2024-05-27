@@ -114,6 +114,7 @@ function initializeTradingViewWidget(symbol) {
     const container = document.getElementById(chartDivId);
     const widgetDivId = 'tradingview-widget';
 
+<<<<<<< HEAD
     container.innerHTML = '';
 
     const widgetDiv = document.createElement('div');
@@ -193,3 +194,8 @@ function formatCurrency(value) {
 function formatVolume(value) {
     return new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 }).format(value);
 }
+=======
+  // Display past inputs when the page loads
+  displayStocks();
+});
+>>>>>>> 5edf4f8 (Initial commit on stock up app - includes header, search, ticker tape and advanced chart)

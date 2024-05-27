@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - features/technical_data  # Set the branch to deploy from
+      - main  # Set the branch to deploy from
 
 jobs:
   build-and-deploy:
