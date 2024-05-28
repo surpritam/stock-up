@@ -30,7 +30,7 @@ fetch(url, options)
     });
   });
 
-
+// Search and store to local storage
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('dataForm');
   const inputList = document.getElementById('search-ticker');
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
           localStorage.setItem('search-ticker', JSON.stringify(inputs)); // Save array to local storage
           displayStocks(); // Update the display
           alert('Data saved to local storage!');
+          console.log(inputs)
       } else {
           alert('Please enter something.');
       }
