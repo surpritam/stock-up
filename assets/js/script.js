@@ -6,6 +6,15 @@ $(function () {
   });
 });
 
+// $(document).ready(function() {
+// // $(function () {
+//   $.getJSON("assets/data/ticker_list.json", function(stockSymbols) {
+//   $("#search-ticker").autocomplete({
+//     source: stockSymbols,
+//   });
+// });
+// });
+
 // Get top news data for stocks
 const url = 'https://seeking-alpha.p.rapidapi.com/news/v2/list-by-symbol?id=aapl&size=5&number=1';
 const options = {
@@ -64,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Display past inputs when the page loads
-  displayInputs();
+  displayStocks();
 });
 
 
