@@ -1,13 +1,30 @@
-const ticker_list = ["AAPL", "MSFT", "TSLA", "NVDA"];
+// const ticker_list = ["AAPL", "MSFT", "TSLA", "NVDA"];
 
-$(function () {
-  $("#search-ticker").autocomplete({
-    source: ticker_list
-  });
+// $(function () {
+//   $("#search-ticker").autocomplete({
+//     source: ticker_list
+//   });
+// });
+
+// Autocomplete from ticker_list.json
+document.addEventListener('DOMContentLoaded', function() {
+  fetch('assets/data/ticker_list.json')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(stockSymbols => {
+          $("#search-ticker").autocomplete({
+              source: stockSymbols,
+              minLength: 2
+          });
+      })
+      .catch(error => console.error('There has been a problem with your fetch operation:', error));
 });
-
 // $(document).ready(function() {
-// // $(function () {
+// $(function () {
 //   $.getJSON("assets/data/ticker_list.json", function(stockSymbols) {
 //   $("#search-ticker").autocomplete({
 //     source: stockSymbols,
