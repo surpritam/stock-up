@@ -1,11 +1,3 @@
-// const ticker_list = ["AAPL", "MSFT", "TSLA", "NVDA"];
-
-// $(function () {
-//   $("#search-ticker").autocomplete({
-//     source: ticker_list
-//   });
-// });
-
 // Autocomplete from ticker_list.json
 document.addEventListener('DOMContentLoaded', function() {
   fetch('assets/data/ticker_list.json')
@@ -23,18 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .catch(error => console.error('There has been a problem with your fetch operation:', error));
 });
-// $(document).ready(function() {
-// $(function () {
-//   $.getJSON("assets/data/ticker_list.json", function(stockSymbols) {
-//   $("#search-ticker").autocomplete({
-//     source: stockSymbols,
-//   });
-// });
-// });
+
 
 // Get top news data for stocks
 const url = 'https://seeking-alpha.p.rapidapi.com/news/v2/list-by-symbol?id=aapl&size=5&number=1';
 const options = {
+
   method: 'GET',
   headers: {
     'X-RapidAPI-Key': 'Your API Key',
@@ -92,5 +78,3 @@ document.addEventListener('DOMContentLoaded', function() {
   // Display past inputs when the page loads
   displayStocks();
 });
-
-
