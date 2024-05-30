@@ -1,5 +1,5 @@
-// Get real time financial data for stocks
-const realTimeUrl = 'https://real-time-finance-data.p.rapidapi.com/stock-overview?symbol=S%26P%20500&language=en';
+// Get real time financial data
+const realTimeUrl = 'https://real-time-finance-data.p.rapidapi.com/stock-overview?symbol=AAPL&language=en';
 const realTimeOptions = {
 	method: 'GET',
 	headers: {
