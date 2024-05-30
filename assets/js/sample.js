@@ -1,10 +1,10 @@
-const realTimeUrl = 'https://real-time-finance-data.p.rapidapi.com/stock-overview?symbol=AAPL%3ANASDAQ&language=en';
+// Get real time financial data for stocks
+const realTimeUrl = 'https://real-time-finance-data.p.rapidapi.com/stock-overview?symbol=S%26P%20500&language=en';
 const realTimeOptions = {
 	method: 'GET',
 	headers: {
-		//'x-rapidapi-key': '5e12ebe5c5msh196f8cfafa53e01p121694jsneaaf7d9d6e8c',
-		'YOUR API HERE'
-		'x-rapidapi-host': 'real-time-finance-data.p.rapidapi.com'
+		'Your API Here',
+    'x-rapidapi-host': 'real-time-finance-data.p.rapidapi.com'
 	}
 };
 
@@ -22,5 +22,3 @@ fetch(realTimeUrl, realTimeOptions)
     });
   });
 }
-
-
