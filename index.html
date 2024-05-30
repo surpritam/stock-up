@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <header>
     <!-- Navigation bar -->
@@ -65,9 +66,12 @@
     </nav>
 
     <!-- Hero section with heading and subheading -->
-    <div class="bg-zinc-50 px-6 py-10 text-center text-surface dark:bg-neutral-700 dark:text-white">
-        <h1 class="mb-6 text-3xl font-bold">Get ready to elevate your stock game with Stock Up</h1>
-        <h3 class="mb-8 text-1xl font-bold">your go-to destination for tracking the latest market trends</h3>
+    <div class="header bg-zinc-50 px-6 py-10 text-center text-surface dark:bg-neutral-700 dark:text-white"
+        style="height:calc(100% - 32px);width:100%">
+        <img src="stock.jpg" alt="stock logo" />
+        <h1 class="mb-6 text-5xl font-bold">Stock Up</h1>
+        <h3 class="mb-8 text-3xl font-bold">Get ready to elevate your stock game</h3>
+        <!-- <h3 class="mb-8 text-2xl font-bold">Your go-to destination for tracking the latest market trends</h3> -->
     </div>
 </header>
 
@@ -90,7 +94,7 @@
         </button>
       </div> -->
 
-    <form id="dataForm">
+    <form id="dataForm" class="search-bar">
         <input type="text" id="search-ticker" placeholder="Stock Ticker" />
         <button type="submit" id="search">Search</button>
     </form>
@@ -124,17 +128,18 @@
             </script>
     </div>
     <!-- TradingView Widget END -->
+
     <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container" style="height:100%;width:100%" id="chart">
-        <h2 class="text-2xl font-bold mb-4">Advanced Chart</h2>
-        <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
-                target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-        <script type="text/javascript"
-            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-                {
-                    "width": 980,
-                        "height": 610,
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="tradingview-widget-container" style="height:100%width:100%" id="chart">
+            <h2 class="chart text-2xl font-bold mb-4 rounded-lg">Advanced Chart</h2>
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
+                    target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                    {
+                        "autosize": true,
                             "symbol": "NASDAQ:AAPL",
                                 "interval": "D",
                                     "timezone": "Etc/UTC",
@@ -144,11 +149,12 @@
                                                     "allow_symbol_change": true,
                                                         "calendar": false,
                                                             "support_host": "https://www.tradingview.com"
-                }
-            </script>
+                    }
+                </script>
+        </div>
     </div>
-    <div class="top-stories-container p-4 bg-gray-100 rounded-lg" id="top-stories">
-        <h2 class="text-2xl font-bold mb-4">Top Stories</h2>
+    <div class="top-stories-container p-2 bg-gray-100" id="top-stories">
+        <h2 class="text-2xl font-bold mb-4 rounded-lg">Top Stories</h2>
     </div>
     <!-- TradingView Widget END -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
