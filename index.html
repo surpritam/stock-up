@@ -14,7 +14,7 @@
 </head>
 <header>
     <!-- Navigation bar -->
-    <nav class="relative flex w-full items-center justify-between bg-neutral-800 py-2 shadow-dark-mild dark:bg-body-dark lg:flex-wrap lg:justify-start lg:py-4"
+    <nav class="relative flex w-full text-lg items-center justify-between bg-neutral-800 py-2 shadow-dark-mild dark:bg-body-dark lg:flex-wrap lg:justify-start lg:py-4"
         data-twe-navbar-ref>
         <div class="flex w-full flex-wrap items-center justify-between px-3">
             <div class="flex items-center">
@@ -66,11 +66,12 @@
     </nav>
 
     <!-- Hero section with heading and subheading -->
-    <div class="header bg-zinc-50 px-6 py-10 text-center text-surface dark:bg-neutral-700 dark:text-white"
-        style="height:calc(100% - 32px);width:100%">
-        <img src="stock.jpg" alt="stock logo" />
-        <h1 class="mb-6 text-5xl font-bold">Stock Up</h1>
-        <h3 class="mb-8 text-3xl font-bold">Get ready to elevate your stock game</h3>
+    <div class="header bg-zinc-50 px-4 py-4 text-center text-surface dark:bg-neutral-700 dark:text-white"
+        style="height:calc(100% - 10px);width:100%">
+       
+        <h1 class=" mt-2 mb-4 text-6xl font-bold">Stock Up</h1>
+        <img src="stock.jpg" alt="stock logo" class="mb-6" />
+        <h3 class="text-2xl font-bold">Get ready to elevate your stock game</h3>
         <!-- <h3 class="mb-8 text-2xl font-bold">Your go-to destination for tracking the latest market trends</h3> -->
     </div>
 </header>
@@ -133,9 +134,9 @@
     <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="tradingview-widget-container" style="height:100%width:100%" id="chart">
             <h2 class="chart text-2xl font-bold mb-4 rounded-lg">Advanced Chart</h2>
-            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 30px);width:100%"></div>
             <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow"
-                    target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+                    target="_blank"><span class="blue-text mb-4">Track all markets on TradingView</span></a></div>
             <script type="text/javascript"
                 src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
                     {
@@ -153,8 +154,8 @@
                 </script>
         </div>
     </div>
-    <div class="top-stories-container p-2 bg-gray-100" id="top-stories">
-        <h2 class="text-2xl font-bold mb-4 rounded-lg">Top Stories</h2>
+    <div class="top-stories-container bg-gray" id="top-stories">
+        <h2 class="text-2xl font-bold mt-4 mb-4 rounded-lg">Top Stories</h2>
     </div>
     <!-- TradingView Widget END -->
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
