@@ -42,29 +42,47 @@ fetch(url, options)
     });
   });
 
-// Get real time financial data for stocks
+// Get real-time financial data
 const realTimeUrl = 'https://real-time-finance-data.p.rapidapi.com/stock-overview?symbol=AAPL&language=en';
 const realTimeOptions = {
 	method: 'GET',
 	headers: {
-		'Your API Here',
+    'x-rapidapi-key': 'Your API Here',
     'x-rapidapi-host': 'real-time-finance-data.p.rapidapi.com'
 	}
 };
+// Define the container
+const realTimeContainer = document.querySelector('.real-time-financial-data-container');
 
+
+// Set up the fetch for Real Time Financial Data
 fetch(realTimeUrl, realTimeOptions)
-  .then(function (response) {
-    return response.json();
-  }).then(function (data) {
-    const realTimeContainer = document.querySelector('.real-time-financial-data-container');
+  .then(response => response.json())
+  .then(data => {
     const realTimeArr = data.data;
-    realTimeArr.forEach(news => {
-      console.log(news);
-      const realTimeParagraph = document.createElement('p');
-      realTimeParagraph.textContent = news.attributes.title;
-      realTimeContainer.appendChild(realTimeParagraph);
-    });
+    // Appending chosen data points to the document
+    appendDataPoint(realTimeContainer, 'Price', realTimeArr.price);
+    appendDataPoint(realTimeContainer, 'Open', realTimeArr.open);
+    appendDataPoint(realTimeContainer, 'High', realTimeArr.high);
+    appendDataPoint(realTimeContainer, 'Low', realTimeArr.low);
+    appendDataPoint(realTimeContainer, 'Volume', realTimeArr.volume);
+    appendDataPoint(realTimeContainer, 'Previous Close', realTimeArr.previous_close);
+    appendDataPoint(realTimeContainer, 'Year Low', realTimeArr.year_low);
+    appendDataPoint(realTimeContainer, 'Year High', realTimeArr.year_high);
+    appendDataPoint(realTimeContainer, 'Average Volume', realTimeArr.avg_volume);
+    appendDataPoint(realTimeContainer, 'Company PE Ratio', realTimeArr.company_pe_ratio);
+    appendDataPoint(realTimeContainer, 'Company Market Cap', realTimeArr.company_market_cap);
+    appendDataPoint(realTimeContainer, 'Company Dividend Yield', realTimeArr.company_dividend_yield);
+    appendDataPoint(realTimeContainer, 'About', realTimeArr.about);
+  })
+  .catch(error => {
+    console.error('Error fetching financial data', error);
   });
+
+function appendDataPoint(container, label, value) {
+  const realTimeParagraph = document.createElement('p');
+  realTimeParagraph.textContent = `${label}: ${value}`;
+  container.appendChild(realTimeParagraph);
 }
 
 // Search and store to local storage
