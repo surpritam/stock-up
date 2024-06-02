@@ -1,0 +1,57 @@
+/* GLOBAL SELECTORS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+header {
+    display: block;
+    align-content: center;
+}
+
+.header img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+h1 {
+    display: inline;
+    align-items: center;
+    color: #39FF14; /* Neon green */
+}
+
+h2 {
+    margin: 2px;
+}
+
+.search-bar {
+    border: solid;
+    max-width: 240px;
+    margin: 5px 2px 5px 2px;
+    color: black;
+}
+
+.chart {
+    margin-top: 20px;
+}
+
+.top-stories-container {
+    padding-top: 50px;
+}
+
+.dark-mode {
+    background-color: #1f2937;
+    color: #f3f4f6;
+}
+
+.text-neon-green {
+    color: #39FF14; /* Neon green */
+}

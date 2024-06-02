@@ -1,0 +1,23 @@
+{
+  "name": "stock-up",
+  "version": "1.0.0",
+  "description": "Project 1 - Stock Info News feed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surpritam/stock-up.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surpritam/stock-up/issues"
+  },
+  "homepage": "https://github.com/surpritam/stock-up#readme",
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
