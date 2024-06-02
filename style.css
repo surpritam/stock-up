@@ -1,0 +1,23 @@
+const url = 'https://seeking-alpha.p.rapidapi.com/news/v2/list-by-symbol?id=tsla&size=20&number=1';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'dbc8f6df4cmsh6cee0ff6dea9348p15ab1cjsn84ebdcbe7318',
+		'X-RapidAPI-Host': 'seeking-alpha.p.rapidapi.com'
+	}
+};
+
+
+fetch(url) .then(function(response) {
+        return response.json();
+    }) .then(function(data) {
+        console.log(data)
+    })
+
+/* try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+} */
