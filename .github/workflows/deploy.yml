@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - features/technical_data  # Set the branch to deploy from
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Replace API keys in script.js
+        run: |
+          sed -i 's/__SEEKING_ALPHA_NEWS_KEY__/${{ secrets.SEEKING_ALPHA_NEWS_KEY }}/' assets/js/script.js
+          sed -i 's/__REAL_FINANCIAL_DATA_KEY__/${{ secrets.REAL_FINANCIAL_DATA_KEY }}/' assets/js/script.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # Adjust this if your build output is in a different directory

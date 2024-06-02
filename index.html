@@ -12,85 +12,84 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<header>
-    <!-- Navigation bar -->
-    <nav class="relative flex w-full items-center justify-between bg-neutral-800 py-2 shadow-dark-mild dark:bg-body-dark lg:flex-wrap lg:justify-start lg:py-4"
-        data-twe-navbar-ref>
-        <div class="flex w-full flex-wrap items-center justify-between px-3">
-            <div class="flex items-center">
-                <!-- Hamburger menu button -->
-                <button
-                    class="block border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
-                    type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContentY"
-                    aria-controls="navbarSupportedContentY" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- Hamburger menu icon -->
-                    <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
-                    </span>
-                </button>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <header>
+        <!-- Navigation bar -->
+        <nav class="relative flex w-full items-center justify-between bg-neutral-800 py-2 shadow-lg lg:flex-wrap lg:justify-start lg:py-4"
+            data-twe-navbar-ref>
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+                <div class="flex items-center">
+                    <!-- Hamburger menu button -->
+                    <button
+                        class="block border-0 bg-transparent px-2 text-white hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 lg:hidden"
+                        type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContentY"
+                        aria-controls="navbarSupportedContentY" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- Hamburger menu icon -->
+                        <span class="[&>svg]:h-7 [&>svg]:w-7 [&>svg]:stroke-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <!-- Navigation links -->
+                <div class="hidden grow basis-[100%] items-center text-center lg:flex lg:basis-auto lg:text-left"
+                    id="navbarSupportedContentY" data-twe-collapse-item>
+                    <ul class="me-auto flex flex-col lg:flex-row" data-twe-navbar-nav-ref>
+                        <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="block text-white transition duration-200 hover:text-gray-400 focus:text-gray-400 active:text-gray-400 lg:px-2"
+                                href="#chart" data-twe-nav-link-ref data-twe-ripple-init
+                                data-twe-ripple-color="light">Chart</a>
+                        </li>
+                        <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="block text-white transition duration-200 hover:text-gray-400 focus:text-gray-400 active:text-gray-400 lg:px-2"
+                                href="#recent-searches" data-twe-nav-link-ref data-twe-ripple-init
+                                data-twe-ripple-color="light">Recent Searches</a>
+                        </li>
+                        <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="block text-white transition duration-200 hover:text-gray-400 focus:text-gray-400 active:text-gray-400 lg:px-2"
+                                href="#top-stories" data-twe-nav-link-ref data-twe-ripple-init
+                                data-twe-ripple-color="light">Top Stories</a>
+                        </li>
+                        <li class="mb-2 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="block text-white transition duration-200 hover:text-gray-400 focus:text-gray-400 active:text-gray-400 lg:px-2"
+                                href="#financial-data" data-twe-nav-link-ref data-twe-ripple-init
+                                data-twe-ripple-color="light">Financial Data</a>
+                        </li>
+                        <li class="mb-2 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                            <a class="block text-white transition duration-200 hover:text-gray-400 focus:text-gray-400 active:text-gray-400 lg:px-2"
+                                href="#dev-contacts" data-twe-nav-link-ref data-twe-ripple-init
+                                data-twe-ripple-color="light">Developers</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <!-- Navigation links -->
-            <div class="!visible hidden grow basis-[100%] items-center text-center lg:!flex lg:basis-auto lg:text-left"
-                id="navbarSupportedContentY" data-twe-collapse-item>
-                <ul class="me-auto flex flex-col lg:flex-row" data-twe-navbar-nav-ref>
-                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                        <a class="block text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                            href="#chart" data-twe-nav-link-ref data-twe-ripple-init
-                            data-twe-ripple-color="light">Chart</a>
-                    </li>
-                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                        <a class="block text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                            href="#recent-searches" data-twe-nav-link-ref data-twe-ripple-init
-                            data-twe-ripple-color="light">Recent
-                            Searches</a>
-                    </li>
-                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                        <a class="block text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                            href="#top-stories" data-twe-nav-link-ref data-twe-ripple-init
-                            data-twe-ripple-color="light">Top
-                            Stories</a>
-                    </li>
-                    <li class="mb-2 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                        <a class="block text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                            href="#financial-data" data-twe-nav-link-ref data-twe-ripple-init
-                            data-twe-ripple-color="light">Financial Data</a>
-                    </li>
-                    <li class="mb-2 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-                        <a class="block text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
-                            href="#dev-contacts" data-twe-nav-link-ref data-twe-ripple-init
-                            data-twe-ripple-color="light">Developers</a>
-                    </li>
-                </ul>
-            </div>
+        </nav>
+
+        <!-- Hero section with heading and subheading -->
+        <div class="header bg-zinc-50 px-4 py-4 text-center dark:bg-neutral-700" style="height:calc(100% - 10px);width:100%">
+            <h1 class="mt-2 mb-4 text-6xl font-bold text-neon-green">Stock Up</h1>
+            <img src="./assets/images/stock.jpg" alt="stock logo" class="mb-6 mx-auto w-24 h-24" />
+            <h3 class="text-2xl font-bold">Get ready to elevate your stock game</h3>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero section with heading and subheading -->
-    <div class="header bg-zinc-50 px-4 py-4 text-center text-surface dark:bg-neutral-700 dark:text-white"
-        style="height:calc(100% - 10px);width:100%">
+    <main class="container mx-auto px-4 py-6">
+        <form id="dataForm" class="mb-6 flex items-center space-x-4">
+            <input type="text" id="search-ticker" placeholder="Stock Ticker"
+                class="border border-gray-300 rounded px-4 py-2 w-full dark:bg-gray-800 dark:text-gray-100" />
+            <button type="submit" id="search"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Search</button>
+        </form>
 
-        <h1 class=" mt-2 mb-4 text-6xl font-bold">Stock Up</h1>
-        <img src="./assets/images/stock.jpg" alt="stock logo" class="mb-6" />
-        <h3 class="text-2xl font-bold">Get ready to elevate your stock game</h3>
-        <!-- <h3 class="mb-8 text-2xl font-bold">Your go-to destination for tracking the latest market trends</h3> -->
-    </div>
-</header>
-
-<body>
-    <form id="dataForm">
-        <input type="text" id="search-ticker" placeholder="Stock Ticker" />
-        <button type="submit" id="search">Search</button>
-    </form>
-
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
-            async>
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container mb-6">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+                async>
                 {
                     "symbols": [
                         {
@@ -113,15 +112,13 @@
                                         "locale": "en"
                 }
             </script>
-    </div>
-    <!-- TradingView Widget END -->
-    <!-- TradingView Widget BEGIN -->
-    <div class="container mx-auto px-4 py-6">
-        <div class="flex space-x-4">
-            <div class="w-2/3">
-                <h2 class="text-2xl font-bold mb-4">Advanced Chart</h2>
-                <div class="tradingview-widget-container p-3" style="height:100%;width:100%" id="chart">
-                    <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+        </div>
+        <!-- TradingView Widget END -->
+
+        <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-6">
+            <div class="w-full lg:w-2/3 bg-white p-4 rounded shadow-lg dark:bg-gray-800" id="chart">
+                <div class="tradingview-widget-container" style="height:100%;width:100%">
+                    <div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>
                     <div class="tradingview-widget-copyright">
                         <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
                             <span class="blue-text">Track all markets on TradingView</span>
@@ -130,41 +127,50 @@
                     <script id="tradingview-chart-script" type="text/javascript" async></script>
                 </div>
             </div>
-            <div class="recent-searches-container w-1/3" id="recent-searches">
+
+            <div class="w-full lg:w-1/3 bg-white p-4 rounded shadow-lg dark:bg-gray-800" id="recent-searches">
                 <h2 class="text-2xl font-bold mb-4">Recent Searches</h2>
                 <ul id="recent-searches-list" class="list-disc list-inside"></ul>
             </div>
         </div>
-    </div>
-    <div class="top-stories-container pt-12 p-4 bg-gray-100 rounded-lg" id="top-stories">
-        <h2 class="text-2xl font-bold mb-4">Top Stories</h2>
-        <div class="top-stories-list"></div>
-    </div>
-    <div class="real-time-financial-data-container p-4 bg-gray-100 rounded-lg" id="financial-data">
-        <h2 class="text-2xl font-bold mb-4">Financial Data</h2>
-        <div class="financial-data-list"></div>
-    </div>
-    <!-- TradingView Widget END -->
+
+        <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 mb-6">
+            <div class="w-full lg:w-2/3 bg-white p-4 rounded shadow-lg dark:bg-gray-800" id="top-stories">
+                <h2 class="text-2xl font-bold mb-4">Top Stories</h2>
+                <div class="top-stories-list"></div>
+            </div>
+
+            <div class="w-full lg:w-1/3 bg-white p-4 rounded shadow-lg dark:bg-gray-800" id="financial-data">
+                <h2 class="text-2xl font-bold mb-4">Financial Data</h2>
+                <div class="financial-data-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white p-4 rounded shadow-lg dark:bg-gray-800">
+        <div id="dev-contacts">
+            <h2 class="text-2xl font-bold mb-4">Contacts</h2>
+            <ul>
+                <li>
+                    <a class="text-blue-500 hover:text-blue-700 underline" href="https://github.com/awb2987"
+                        target="_blank" rel="noopener noreferrer">Alex's github</a>
+                </li>
+                <li>
+                    <a class="text-blue-500 hover:text-blue-700 underline" href="https://github.com/surpritam"
+                        target="_blank" rel="noopener noreferrer">Pritam's github</a>
+                </li>
+                <li>
+                    <a class="text-blue-500 hover:text-blue-700 underline" href="https://github.com/S1NGS1NG80"
+                        target="_blank" rel="noopener noreferrer">Sean's github</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
-<footer>
-    <div class="dev-contacts-container p-4 bg-gray-100 rounded-lg" id="dev-contacts">
-        <h2 class="text-2xl font-bold mb-4">Contacts</h2>
-        <ul>
-            <li>
-                <a class = 'text-blue-500 hover:text-blue-700 underline' href="https://github.com/awb2987" target="_blank" rel="noopener noreferrer">Alex's github</a>
-            </li>
-            <li>
-                <a class = 'text-blue-500 hover:text-blue-700 underline' href="https://github.com/surpritam" target="_blank" rel="noopener noreferrer">Pritam's github</a>
-            </li>
-            <li>
-                <a class = 'text-blue-500 hover:text-blue-700 underline' href="https://github.com/S1NGS1NG80" target="_blank" rel="noopener noreferrer">Sean's github</a>
-            </li>
-        </ul>
-    </div>
-</footer>
 
 </html>
